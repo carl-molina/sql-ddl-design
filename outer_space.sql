@@ -4,6 +4,14 @@ temp_in_kelvin NUMERIC(10, 0) NOT NULL
 );
 
 
+-- testing something out in the code review
+CREATE TABLE planets (
+planet VARCHAR(20) PRIMARY KEY,
+orbital_period_in_yrs NUMERIC(10, 3) NOT NULL,
+star_id VARCHAR(20) NOT NULL REFERENCES stars
+);
+
+-- the original command
 CREATE TABLE planets (
 planet VARCHAR(20) PRIMARY KEY,
 orbital_period_in_yrs FLOAT NOT NULL,

@@ -5,6 +5,13 @@
 --“for each planet: its name, the star it revolves around,
 --and the numbers of moons (if any) it has”
 
+-- codee review
+CREATE TABLE planets (
+planet VARCHAR(20) PRIMARY KEY,
+orbital_period_in_yrs FLOAT NOT NULL,
+star_id VARCHAR(20) NOT NULL REFERENCES stars
+);
+
 
 
 
