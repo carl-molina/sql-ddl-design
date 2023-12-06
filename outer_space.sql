@@ -2,6 +2,19 @@
 -- PostgreSQL database dump
 --
 
+--“for each planet: its name, the star it revolves around,
+--and the numbers of moons (if any) it has”
+
+SELECT planet, star_id AS star, COUNT(moon) AS moon_count
+    FROM planets
+        LEFT OUTER JOIN moons
+            ON moons.planet_id = planets.planet
+    GROUP BY planet
+    ORDER BY planet;
+
+
+
+
 -- Dumped from database version 15.4 (Homebrew)
 -- Dumped by pg_dump version 15.4 (Homebrew)
 
